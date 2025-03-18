@@ -1,2 +1,2 @@
-# suyashnagumalli.com-
+# suyashnagumalli.com
 My personal website
