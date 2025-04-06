@@ -24,9 +24,7 @@ const { tag, tagName, size = "sm" } = Astro.props;
       { "text-sm": size === "sm" },
     ]}
   >
-    <span
-      class="inline-flex items-center underline decoration-dashed"
-    >
+    <span class="inline-flex items-center underline decoration-dashed">
       <IconHash
         class:list={[
           "inline-block opacity-80",
@@ -34,6 +32,7 @@ const { tag, tagName, size = "sm" } = Astro.props;
           { "size-6": size === "lg" },
         ]}
       />
-    <span>{tagName}</span>
+      <span>{tagName}</span>
+    </span>
   </a>
 </li>
