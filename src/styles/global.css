@@ -11,18 +11,25 @@
 } */
 :root,
 html[data-theme="light"] {
-  --background: #fafcfc; /* Light, almost white (unchanged) */
-  --foreground: #222e36; /* Dark grayish-blue (unchanged) */
-  --accent: #6a00d3; /* Vibrant purple (was bright pink/magenta) */
-  --muted: #a1c8f1; /* Soft pastel purple (was soft pastel pink) */
-  --border: #a98ee3; /* Light purple (was light pink) */
+  --background: #fafafc;
+  --foreground: #1e1b2e;
+  --accent: #7e22ce;
+  --muted: #ede9fe;
+  --border: #c4b5fd;
+  --link-color: #7e22ce; /* Match purple accent */
+  --link-hover-bg: #7e22ce;
+  --link-hover-text: white;
 }
+
 html[data-theme="dark"] {
   --background: #212737;
   --foreground: #eaedf3;
   --accent: #ff6b01;
   --muted: #343f60bf;
   --border: #ab4b08;
+  --link-color: #ff6b01; /* Match orange accent */
+  --link-hover-bg: #ff6b01;
+  --link-hover-text: white; /* Dark background for contrast */
 }
 @theme inline {
   --color-background: var(--background);
@@ -43,14 +50,14 @@ html[data-theme="dark"] {
   body {
     @apply flex min-h-svh flex-col bg-background font-serif text-foreground selection:bg-accent/75 selection:text-background;
   }
-  /* unvisited link */
   .link {
-    color: #6a00d3;
+    color: var(--link-color);
+    transition: all 0.2s ease;
   }
-  /* mouse over link */
+
   .link:hover {
-    color: white;
-    background-color: #6a00d3;
+    color: var(--link-hover-text);
+    background-color: var(--link-hover-bg);
   }
   button {
     @apply outline-offset-1 outline-accent focus-visible:no-underline focus-visible:outline-2 focus-visible:outline-dashed;
@@ -65,12 +72,11 @@ html[data-theme="dark"] {
   }
 }
 .background-tile {
-  @apply absolute mx-auto flex max-w-4xl items-start justify-items-center;
+  @apply absolute mx-auto flex max-w-4xl items-start justify-items-center px-4;
 }
 
 .background-tile video {
-  @apply opacity-20;
-  width: 100%;
+  @apply opacity-10;
 }
 
 .active-nav {

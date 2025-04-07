@@ -5,11 +5,11 @@ export const SITE = {
   desc: "Personal website with SEO - Suyash Nagumalli",
   title: "Suyash!",
   ogImage: "astropaper-og.jpg",
-  lightAndDarkMode: false,
+  lightAndDarkMode: true,
   postPerIndex: 4,
   postPerPage: 4,
   scheduledPostMargin: 15 * 60 * 1000, // 15 minutes
-  showArchives: true,
+  showArchives: false,
   showBackButton: true, // show back button in post detail
   editPost: {
     url: "https://github.com/satnaing/astro-paper/edit/main/src/data/blog",

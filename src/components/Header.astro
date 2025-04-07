@@ -16,10 +16,9 @@ const currentPath =
   pathname.endsWith("/") && pathname !== "/" ? pathname.slice(0, -1) : pathname;
 
 const isActive = (path: string) => {
-  const currentPathArray = currentPath.split("/").filter(p => p.trim());
-  const pathArray = path.split("/").filter(p => p.trim());
-
-  return currentPath === path || currentPathArray[0] === pathArray[0];
+  const current = currentPath.replace(/\/$/, "");
+  const target = path.replace(/\/$/, "");
+  return current === target || current.startsWith(target + "/");
 };
 ---
 
@@ -77,18 +76,26 @@ const isActive = (path: string) => {
             </a>
           </li>
           <li class="col-span-2">
-            <a href="/poems" class:list={{ "active-nav": isActive("/poems") }}>
+            <a href="/music" class:list={{ "active-nav": isActive("/music") }}>
+              Music
+            </a>
+          </li>
+          <li class="col-span-2">
+            <a
+              href="/posts/poems"
+              class:list={{ "active-nav": isActive("/posts/poems") }}
+            >
               Poems
             </a>
           </li>
           <li class="col-span-2">
-            <a href="/posts" class:list={{ "active-nav": isActive("/posts") }}>
+            <a
+              href="/posts"
+              class:list={{
+                "active-nav": isActive("/posts") && !isActive("/posts/poems"),
+              }}
+            >
               Blog
-            </a>
-          </li>
-          <li class="col-span-2">
-            <a href="/music" class:list={{ "active-nav": isActive("/music") }}>
-              Music
             </a>
           </li>
           {
