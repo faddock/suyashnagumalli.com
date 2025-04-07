@@ -16,4 +16,4 @@ Dear reader, during my senior year of college, I enrolled myself in a poetry cla
 
 ![Poem1](@/assets/images/boynextdoor.jpg)
 ![Poem2](@/assets/images/theaftermath.jpg)
-![poem3](@/assets/images/Jasminessonnet.jpg)
+![poem3](@/assets/images/jasminessonnet.jpg)
