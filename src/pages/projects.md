@@ -33,19 +33,17 @@ layout: ../layouts/AboutLayout.astro
 .category-header {
   margin-top: 2rem;
   margin-bottom: 1rem;
-  color: #3b82f6;
-  border-bottom: 2px solid #3b82f6;
+  color: var(--accent);
+  border-bottom: 2px solid var(--accent);
   padding-bottom: 0.5rem;
 }
 </style>
-
-## Projects by Technology
 
 <h3 class="category-header">AI & Machine Learning</h3>
 
 <div>
   <div class="header-container">
-    <h4 class="header-title"><a href="https://github.com/RAG-Retrieval-LLM">Improving RAG Retrieval Methods</a></h4>
+    <h4 class="header-title"><a href="https://www.youtube.com/watch?v=5yCXNR0HYYo">Improving RAG Retrieval Methods</a></h4>
     <p class="header-date">Oct - Dec 2024 (~70 hours)</p>
   </div>
   <ul class="ul-projects">
@@ -98,7 +96,7 @@ layout: ../layouts/AboutLayout.astro
   </ul>
 </div>
 
-<h3 class="category-header">Web Development & Data Visualization</h3>
+<h3 class="category-header">Web Development</h3>
 
 <div>
   <div class="header-container">
@@ -122,7 +120,18 @@ layout: ../layouts/AboutLayout.astro
   </ul>
 </div>
 
-<h3 class="category-header">Mobile & App Development</h3>
+<div>
+  <div class="header-container">
+    <h4 class="header-title"><a href="https://devpost.com/software/ctassist-2qu54h">CTAssist</a></h4>
+    <p class="header-date">Apr 2021</p>
+  </div>
+  <ul class="ul-projects">
+    <li class="li-projects">Smart Wheelchair-accessible Navigation system for public transport commuters in Chicago.</li>
+    <li class="li-projects">Uses the CTA Transit, Customer Alerts, and Google Maps APIs to calculate most efficient route.</li>
+  </ul>
+</div>
+
+<h3 class="category-header">Mobile App Development</h3>
 
 <div>
   <div class="header-container">
@@ -155,17 +164,6 @@ layout: ../layouts/AboutLayout.astro
   <ul class="ul-projects">
     <li class="li-projects">Program to sync LED lights to song playing on Spotify, enhancing user immersion; successfully tested with 30+ songs.</li>
     <li class="li-projects">Written in Go on Raspberry Pi; uses Spotify API, Bluetooth, and a custom album-art based coloring algorithm.</li>
-  </ul>
-</div>
-
-<div>
-  <div class="header-container">
-    <h4 class="header-title"><a href="https://devpost.com/software/ctassist-2qu54h">CTAssist</a></h4>
-    <p class="header-date">Apr 2021</p>
-  </div>
-  <ul class="ul-projects">
-    <li class="li-projects">Smart Wheelchair-accessible Navigation system for public transport commuters in Chicago.</li>
-    <li class="li-projects">Uses the CTA Transit, Customer Alerts, and Google Maps APIs to calculate most efficient route.</li>
   </ul>
 </div>
 

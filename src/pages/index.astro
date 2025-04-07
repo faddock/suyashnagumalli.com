@@ -1,103 +1,151 @@
 ---
-import { getCollection } from "astro:content";
+// import { getCollection } from "astro:content";
 import Layout from "@/layouts/Layout.astro";
 import Header from "@/components/Header.astro";
 import Footer from "@/components/Footer.astro";
-import Socials from "@/components/Socials.astro";
-import LinkButton from "@/components/LinkButton.astro";
-import Card from "@/components/Card.astro";
-import Hr from "@/components/Hr.astro";
-import getSortedPosts from "@/utils/getSortedPosts";
-import IconRss from "@/assets/icons/IconRss.svg";
-import IconArrowRight from "@/assets/icons/IconArrowRight.svg";
+// import Socials from "@/components/Socials.astro";
+// import LinkButton from "@/components/LinkButton.astro";
+// import Card from "@/components/Card.astro";
+// import Hr from "@/components/Hr.astro";
+// import getSortedPosts from "@/utils/getSortedPosts";
+// import IconRss from "@/assets/icons/IconRss.svg";
+// import IconArrowRight from "@/assets/icons/IconArrowRight.svg";
 import Ben10 from "@/assets/videos/ben10small.mp4";
-import BabyGolf from "@/assets/images/babygolf.jpg";
-import DSC07468 from "@/assets/images/DSC07468.jpg";
-import { SITE } from "@/config";
-import { SOCIALS } from "@/constants";
+// import BabyGolf from "@/assets/images/babygolf.jpg";
+import DSC07399 from "@/assets/images/DSC07399.jpg";
+// import { SITE } from "@/config";
+// import { SOCIALS } from "@/constants";
 
-const posts = await getCollection("blog");
-const sortedPosts = getSortedPosts(posts);
-const featuredPosts = sortedPosts.filter(({ data }) => data.featured);
-const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
+// const posts = await getCollection("blog");
+// const sortedPosts = getSortedPosts(posts);
+// const featuredPosts = sortedPosts.filter(({ data }) => data.featured);
+// const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
 ---
 
 <Layout>
   <Header />
-  <br>
+  <br />
   <main id="main-content" data-layout="index">
-    <section id="hero" class="pt-8 pb-6 relative">
+    <section id="hero" class="relative pt-8 pb-6">
       <div class="background-elem">
-        <div class="background-tile inset-0 z-[-1]">          
-          <video autoplay loop muted playsinline class="video-element">
+        <div class="background-tile inset-0 z-[-1]">
+          <video
+            autoplay
+            loop
+            muted
+            playsinline
+            preload="auto"
+            class="video-element"
+          >
             <source src={Ben10} type="video/mp4" />
           </video>
         </div>
-
       </div>
 
       <!-- Wikipedia-style header section -->
-      <div class="site-container">  
-        <div class="my-8 mt-5">
-          <h1 class="tracking-tight text-3xl font-bold relative z-10 border-gray-300 pb-2">
+      <div class="site-container">
+        <div class="mx-4 mb-4">
+          <h1
+            class="relative z-10 border-gray-300 pb-2 text-3xl font-bold tracking-tight"
+          >
             Suyash Nagumalli
           </h1>
-          <p class="text-red-400 text-lg">సుయష్ నాగుమల్లి | सुयश नागुमल्ली</p>
+          <p class="text-lg text-red-400">సుయష్ నాగుమల్లి | सुयश नागुमल्ली</p>
         </div>
-        
+
         <!-- Wikipedia-style intro paragraph -->
-        <div class="text-gray-700 mb-6 text-lg leading-relaxed">
+        <div class="mx-4 mb-3 text-base">
           <p>
-            <strong>Suyash Nagumalli</strong> (born October 17, 2002) is an American computer scientist, musician, song-writer and entrepreneur of Indian origin. He is currently a graduate student in the Master's of Computer Science program at the 
-            <a class="link" href="https://www.usnews.com/best-colleges/university-of-illinois-urbanachampaign-1775/overall-rankings" target="_blank">University of Illinois Urbana-Champaign</a>. 
-            He works part-time at <a class="link" href="https://abbvie.com" target="_blank">AbbVie</a> 
-            and is looking for <u>new-grad software developer</u> roles starting May 2025.
+            <strong>Suyash Nagumalli</strong> is an American-born Indian programmer,
+            musician, song-writer and entrepreneur. He is a student in the Master's
+            of Computer Science program at the
+            <a
+              class="link"
+              href="https://www.usnews.com/best-colleges/university-of-illinois-urbanachampaign-1775/overall-rankings"
+              target="_blank">University of Illinois Urbana-Champaign</a
+            >. He works part-time at <a
+              class="link"
+              href="https://abbvie.com"
+              target="_blank">AbbVie</a
+            >
+            where he recently led the development of an internal AI platform that
+            helped secure a $2M enterprise contract. He is looking for <u
+              >new-grad software developer</u
+            > roles starting May 2025.
           </p>
         </div>
 
-        <div class="mb-6 text-lg">
-          Reach out: 
+        <div class="mx-4 mb-3 text-base">
+          Reach out:
           <a class="link" href="mailto:usasuyash@gmail.com">Email</a> |
-          <a class="link" href="https://www.instagram.com/suyashnagumalli/?hl=en">Instagram</a>
-          <br>
-          Stalk him: 
-          <a class="link" href="/Suyash_Nagumalli_Resume_SP25.pdf" target="_blank">Resume</a> |
-          <a class="link" href="https://www.linkedin.com/in/suyashnagumalli" target="_blank">LinkedIn</a> |
-          <a class="link" href="https://open.spotify.com/artist/2BgWmJmyhRQnzYvze1bUxZ?si=YRhr1p-RQEikiKYFZDMOlQ">Spotify</a> |
-          <a class="link" href="https://www.youtube.com/channel/UCOau7iLy0MTOMJIYsADZX1A">YouTube</a>
+          <a
+            class="link"
+            href="https://www.instagram.com/suyashnagumalli/?hl=en">Instagram</a
+          >
+          <br />
+          Stalk him:
+          <a
+            class="link"
+            href="/Suyash_Nagumalli_Resume_SP25.pdf"
+            target="_blank">Resume</a
+          > |
+          <a
+            class="link"
+            href="https://www.linkedin.com/in/suyashnagumalli"
+            target="_blank">LinkedIn</a
+          > |
+          <a
+            class="link"
+            href="https://open.spotify.com/artist/2BgWmJmyhRQnzYvze1bUxZ?si=YRhr1p-RQEikiKYFZDMOlQ"
+            >Spotify</a
+          > |
+          <a
+            class="link"
+            href="https://www.youtube.com/channel/UCOau7iLy0MTOMJIYsADZX1A"
+            >YouTube</a
+          >
         </div>
+        <p class="mx-4">Currently based in Urbana, Illinois 📌</p>
 
-        <br><br>
+        <br /><br />
         <!-- Wikipedia-style information box -->
-        <div class="float-right ml-6 mb-6 bg-gray-100 border border-gray-300 rounded p-4 w-80">
-          <div class="text-center mb-3">
+        <div class="float-right ml-6 w-80 rounded bg-[var(--color-muted)] p-4">
+          <div class="mb-3 text-center">
             <span class="font-bold">Suyash Nagumalli</span>
           </div>
-          <div class="text-center mb-3">
-            <img src={DSC07468.src} alt="Suyash Nagumalli" class="mx-auto rounded-sm w-64 mb-2">
-            <span class="text-xs text-gray-600">BS graduation photo shoot in May 2024 </span>
+          <div class="mb-3 text-center">
+            <img
+              src={DSC07399.src}
+              alt="Suyash Nagumalli"
+              class="mx-auto mb-2 w-64 rounded-sm"
+            />
+            <span class="text-xs">Suyash's grad photo shoot in May 2024 </span>
           </div>
-          <hr class="border-gray-300 mb-3">
-          <table class="w-full text-sm border-separate border-spacing-0">
+          <hr class="mb-3 border-gray-300" />
+          <table class="w-full border-separate border-spacing-0 text-sm">
             <tbody>
+              <th class="w-1/3 py-1 pr-2 text-left align-top whitespace-nowrap"
+                >Education</th
+              >
+              <td class="py-1"
+                >University of Illinois at Urbana-Champaign (MS) <br /> University
+                of Illinois at Urbana-Champaign (BS) <br /> Glendale Academy, Hyderabad
+                (HS)</td
+              >
               <tr>
-                <th class="text-left align-top pr-2 py-1 w-1/3 whitespace-nowrap">Born</th>
-                <td class="py-1">October 17, 2002 (age 22) <br> Des Plaines, Illinois, USA</td>
+                <th
+                  class="w-1/3 py-1 pr-2 text-left align-top whitespace-nowrap"
+                  >Occupation</th
+                >
+                <td class="py-1"
+                  >Software Engineer<br />Musician<br />Entrepreneur</td
+                >
               </tr>
               <tr>
-                <th class="text-left align-top pr-2 py-1 w-1/3 whitespace-nowrap">Citizenship</th>
-                <td class="py-1">United States<br>India (OCI)</td>
-              </tr>
-              <tr>
-                <th class="text-left align-top pr-2 py-1 w-1/3 whitespace-nowrap">Education</th>
-                <td class="py-1">University of Illinois at Urbana-Champaign (MS) <br> University of Illinois at Urbana-Champaign (BS) <br> Glendale Academy, Hyderabad (HS)</td>
-              </tr>
-              <tr>
-                <th class="text-left align-top pr-2 py-1 w-1/3 whitespace-nowrap">Occupation</th>
-                <td class="py-1">Software Engineer<br>Musician<br>Entrepreneur</td>
-              </tr>
-              <tr>
-                <th class="text-left align-top pr-2 py-1 w-1/3 whitespace-nowrap">Years active</th>
+                <th
+                  class="w-1/3 py-1 pr-2 text-left align-top whitespace-nowrap"
+                  >Years active</th
+                >
                 <td class="py-1">2020–present</td>
               </tr>
               <!-- <tr>
@@ -105,8 +153,13 @@ const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
                 <td class="py-1">AI <br>Music Composition</td>
               </tr> -->
               <tr>
-                <th class="text-left align-top pr-2 py-1 w-1/3 whitespace-nowrap">Notable works</th>
-                <td class="py-1">"Finals Week" (2022)<br>"New Situation" (2024)</td>
+                <th
+                  class="w-1/3 py-1 pr-2 text-left align-top whitespace-nowrap"
+                  >Notable works</th
+                >
+                <td class="py-1"
+                  >"Finals Week" (2022)<br />"New Situation" (2024)</td
+                >
               </tr>
               <!-- <tr>
                 <th class="text-left align-top pr-2 py-1 w-1/3 whitespace-nowrap">Awards</th>
@@ -114,116 +167,258 @@ const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
               </tr> -->
             </tbody>
           </table>
-          <hr class="border-gray-300 my-3">
+          <hr class="my-3 border-gray-300" />
           <div class="text-sm">
             <div class="mb-2 font-bold">Additional links</div>
             <ul class="list-none space-y-1">
-              <li><a class="link" href="https://cs.illinois.edu/">UIUC CS Department</a></li>
-              <li><a class="link" href="https://music.apple.com/us/album/hey-grace-love-song-feat-blue-mirror-single/1767328783">Apple Music</a></li>
-              <li><a class="link" href="https://researchpark.illinois.edu/tenant_directory/abbvie-innovation-center/">AbbVie Innovation Center</a></li>
+              <li>
+                <a class="link" href="https://cs.illinois.edu/"
+                  >UIUC CS Department</a
+                >
+              </li>
+              <li>
+                <a
+                  class="link"
+                  href="https://music.apple.com/us/album/hey-grace-love-song-feat-blue-mirror-single/1767328783"
+                  >Apple Music</a
+                >
+              </li>
+              <li>
+                <a
+                  class="link"
+                  href="https://researchpark.illinois.edu/tenant_directory/abbvie-innovation-center/"
+                  >AbbVie Innovation Center</a
+                >
+              </li>
             </ul>
           </div>
         </div>
 
         <!-- Wikipedia-style content section -->
-        <div id="about-me" class=" max-w-5xl space-y-6 text-base leading-relaxed">
+        <div
+          id="about-me"
+          class="max-w-5xl space-y-6 text-base leading-relaxed"
+        >
           <div>
-            <h2 class="small-h2-border text-xl font-semibold border-b border-gray-300 pb-1 mb-3">Early life and education</h2>
+            <h2
+              class="small-h2-border mb-3 border-b border-gray-300 pb-1 text-xl font-semibold"
+            >
+              Early life and education
+            </h2>
             <p>
-              Suyash Nagumalli was born in <a class="link" href="https://en.wikipedia.org/wiki/Des_Plaines,_Illinois">Des Plaines, Illinois</a>, and moved to
-              <a class="link" href="https://en.wikipedia.org/wiki/Hyderabad">Hyderabad, India</a> at the age of four. He studied at
-              <a class="link" href="https://glendaleschool.org/in/">Glendale Academy</a> from grades 1 through 12, where his love for computers and creativity took root.
+              Suyash Nagumalli was born in <a
+                class="link"
+                href="https://en.wikipedia.org/wiki/chicago">Chicago</a
+              >, and moved to
+              <a class="link" href="https://en.wikipedia.org/wiki/Hyderabad"
+                >Hyderabad</a
+              > at the age of four. He studied at
+              <a class="link" href="https://glendaleschool.org/in/"
+                >Glendale Academy</a
+              > from grades 1 through 12, where his love for computers and creativity
+              took root.
             </p>
             <p>
-              He began learning computer science in 5th grade and by 6th grade was exploring QBasic, Java, C++, HTML, cybersecurity, hardware, and software fundamentals.
-              A top performer in academics, he scored 6 A*s and 2 As in his IGCSE 10th-grade finals, and was the topper in Math, Computer Science, and Physics in Grade 12. He built his first game, multiplayer Hand Cricket, using Python and SQL, which was featured in his school's Science Fair — a defining moment that led him to pursue Computer Science in college.
+              He began learning computer science in 5th grade, exploring QBasic,
+              Java, C++, HTML, cybersecurity, hardware, and computer
+              fundamentals. A top performer in academics, he scored 6 A*s and 2
+              As in his IGCSE 10th-grade finals, and was the topper in Math,
+              Computer Science, and Physics in Grade 12. He built his first
+              game, multiplayer Hand Cricket, using Python and SQL, which was
+              featured in his school's Science Fair, and won a competitive
+              coding competition at Oakridge aged 16 - defining moments that led
+              him to pursue Computer Science in college.
             </p>
             <p>
-              Outside of school, Suyash was an avid athlete: a state-level qualifier in <a class="link" href="https://en.wikipedia.org/wiki/Roller_skating">roller speed skating</a>, an inter-school competitive swimmer, and a district-level sprinter in the 100m and 4x100m relay.
-              He served as Willow House Captain in 12th grade, demonstrating leadership and commitment beyond the classroom.
+              Outside of school, Suyash was an avid athlete: a state-level
+              qualifier in <a
+                class="link"
+                href="https://en.wikipedia.org/wiki/Roller_skating"
+                >roller speed skating</a
+              >, an inter-school competitive swimmer, and a district-level
+              sprinter in the 100m and 4x100m relay. He served as Willow House
+              Captain in 12th grade, demonstrating leadership and commitment
+              beyond the classroom.
             </p>
           </div>
 
-          
           <div>
-            <h2 class="small-h2-border text-xl font-semibold border-b border-gray-300 pb-1 mb-3">Academic and professional career</h2>
+            <h2
+              class="small-h2-border mb-3 border-b border-gray-300 pb-1 text-xl font-semibold"
+            >
+              Academic and professional career
+            </h2>
             <p>
-              Suyash completed his undergraduate degree in Computer Science at the
-              <a class="link" href="https://cs.illinois.edu/">University of Illinois Urbana-Champaign (UIUC)</a> and is currently pursuing his Master's degree there. His academic journey has been marked by a strong interest in building software that serves people in daily activities and in healthcare.
-            </p>
-            
-            <h3 class="text-lg font-medium mt-4 mb-2">Research and innovation</h3>
-            <p>
-              During his undergraduate studies, Suyash participated in the 2022 Jump ARCHES Summer Internship Program at UIUC's Health Care Engineering Systems Center (HCESC). He worked on developing a virtual reality training module for Extra Corporeal Membrane Oxygenation (ECMO) procedures, creating an accessible simulation for medical professionals.
-            </p>
-            <p>
-              In 2023, while interning at AbbVie Innovation Center as a virtual reality developer, Suyash received the Best Business Innovation Award at UIUC Research Park for creating a virtual environment to simulate the patient screening process. His supervisor praised his initiative, leadership, and innovative thinking in tackling a project that required him to learn new technologies and programming languages.
-            </p>
-            <p>
-              More recently, Suyash built an MVP prompt library to aid in clinical Trial document generation at AbbVie, leading to a $2 million contract with a consultant firm to build out the vision.
-            </p>
-            
-            <h3 class="text-lg font-medium mt-4 mb-2">Entrepreneurship</h3>
-            <p>
-              Suyash has shown entrepreneurial spirit throughout his academic career. He co-founded a no-nonsense expense tracking app where he led backend development, NoSQL architecture, and cloud deployment. 
-            </p>
-            <p>
-              He also participated in a 3-day startup event organized by UIUC's student-run startup organization Founders - Illinois Entrepreneurs. As part of the startup 'Bubbles', he worked on developing an app to The team won the competition and was connected to various opportunities in the industry.
+              Suyash completed his undergraduate degree in Computer Science at
+              the
+              <a class="link" href="https://cs.illinois.edu/"
+                >University of Illinois Urbana-Champaign (UIUC)</a
+              > and is currently pursuing his Master's degree there. His academic
+              journey has been marked by a strong interest in building software that
+              serves people in daily activities and in healthcare.
             </p>
 
-            <h3 class="text-lg font-medium mt-4 mb-2">Hackathons</h3>
+            <h3 class="mt-4 mb-2 text-lg font-medium">
+              Research and innovation
+            </h3>
             <p>
-              Suyash is a 
+              During his undergraduate studies, Suyash participated in the 2022
+              Jump ARCHES Summer Internship Program at UIUC's Health Care
+              Engineering Systems Center (HCESC). He worked on developing a
+              virtual reality training module for Extra Corporeal Membrane
+              Oxygenation (ECMO) procedures, creating an accessible simulation
+              for medical professionals.
+            </p><br />
+            <p>
+              In 2023, while interning at AbbVie Innovation Center as a virtual
+              reality developer, Suyash received the Best Business Innovation
+              Award at UIUC Research Park for creating a virtual environment to
+              simulate the patient screening process. His supervisor praised his
+              initiative, leadership, and innovative thinking in tackling a
+              project that required him to learn new technologies and
+              programming languages. More recently, Suyash built an MVP prompt
+              library to aid in clinical Trial document generation at AbbVie,
+              leading to a $2 million contract with a consultant firm to build
+              out the vision.
+            </p>
+
+            <h3 class="mt-4 mb-2 text-lg font-medium">Entrepreneurship</h3>
+            <p>
+              Suyash has shown entrepreneurial spirit throughout his academic
+              career. He co-founded a no-nonsense expense tracking app called
+              Spndmate where he led backend development, NoSQL architecture, and
+              cloud deployment.
             </p>
             <p>
-              He also participated in a 3-day startup event organized by UIUC's student-run startup organization Founders - Illinois Entrepreneurs. As part of the startup 'Bubbles', he worked on developing an app to The team won the competition and was connected to various opportunities in the industry.
+              He also participated in a 3-day startup event organized by UIUC's
+              student-run startup organization Founders - Illinois
+              Entrepreneurs. As part of the startup 'Bubbles', he worked on
+              developing an app to The team won the competition and was
+              connected to various opportunities in the industry.
             </p>
+
+            <h3 class="mt-4 mb-2 text-lg font-medium">Hackathons</h3>
+            <p>
+              Suyash is an avid hackathon ethusiast. He's participated in over 6
+              hackathons, repeating hackIllinois and UCBerkeley AI hackathon
+              where he met Tom Siebel and was inches away from Andrej Karpathy.
+            </p>
+            <p></p>
           </div>
-          
 
           <div>
-            <h2 class="text-xl font-semibold border-b border-gray-300 pb-1 mb-3">Musical career</h2>
+            <h2
+              class="mb-3 border-b border-gray-300 pb-1 text-xl font-semibold"
+            >
+              Musical career
+            </h2>
             <p>
-              Music has been a significant part of Suyash's identity from a young age. He began playing the piano at age 8 and earned the highest grade certification from
-              <a class="link" href="https://www.trinitycollege.com/qualifications/music/grade-exams/piano">Trinity College London</a> in classical piano at the age of 16.
-              He composed his first original song called "When people go Crazy" in 4th grade on a Yamaha-DGX 640 Piano and continues to make music on Ableton and Logic Pro using his Korg Liano Piano.
-              His secondary instrument is his guitar, and he is also trianing his vocals to pursue his side-quest of becoming a solo artist.
+              Music has been a significant part of Suyash's identity from a
+              young age. He began playing the piano at age 8 and earned the
+              highest grade certification from
+              <a
+                class="link"
+                href="https://www.trinitycollege.com/qualifications/music/grade-exams/piano"
+                >Trinity College London</a
+              > in classical piano at the age of 16. He composed his first original
+              song called "When people go Crazy" in 4th grade on a Yamaha-DGX 640
+              Piano and continues to make music on Ableton and Logic Pro using his
+              Korg Liano Piano. His secondary instrument is his guitar, and he is
+              also trianing his vocals to pursue his side-quest of becoming a solo
+              artist.
             </p>
-            
-            <h3 class="text-lg font-medium mt-4 mb-2">Discography</h3>
-            
+            <br />
+            <p>
+              His dedication and passion for music were recognized
+              internationally when he won bronze at the WPTA international piano
+              competition in 2019 He then ventured into diverse genres such as
+              jazz, boogie-woogie, hip-hop. He took a beatmaking class with
+              Professor Lamont Holden at UIUC and uses Ableton has his main DAW.
+              His influences and favorite artists include Zaeden, Charlie Puth,
+              The Weeknd, Chase Atlantic, BTS, Billie Eilish, Taylor Swift and
+              Justin Bieber.
+            </p>
+
+            <h3 class="mt-4 mb-2 text-lg font-medium">Discography</h3>
+
             <!-- Wikipedia-style discography table -->
             <div class="overflow-x-auto">
-              <table class="min-w-full bg-white border border-gray-300 mt-4 text-sm">
+              <table class="mt-4 min-w-full border-collapse text-sm">
                 <thead>
-                  <tr class="bg-gray-100">
-                    <th class="border border-gray-300 px-4 py-2 text-left">Year</th>
-                    <th class="border border-gray-300 px-4 py-2 text-left">Title</th>
-                    <th class="border border-gray-300 px-4 py-2 text-left">Genre</th>
-                    <th class="border border-gray-300 px-4 py-2 text-left">Writer(s)</th>
-                    <th class="border border-gray-300 px-4 py-2 text-left">Producer(s)</th>
-                    <th class="border border-gray-300 px-4 py-2 text-left">Length</th>
-                    <th class="border border-gray-300 px-4 py-2 text-left">Listen</th>
+                  <tr class="">
+                    <th class="border border-gray-300 px-4 py-2 text-left"
+                      >Year</th
+                    >
+                    <th class="border border-gray-300 px-4 py-2 text-left"
+                      >Title</th
+                    >
+                    <th class="border border-gray-300 px-4 py-2 text-left"
+                      >Genre</th
+                    >
+                    <th class="border border-gray-300 px-4 py-2 text-left"
+                      >Writer(s)</th
+                    >
+                    <th class="border border-gray-300 px-4 py-2 text-left"
+                      >Producer(s)</th
+                    >
+                    <th class="border border-gray-300 px-4 py-2 text-left"
+                      >Length</th
+                    >
+                    <th class="border border-gray-300 px-4 py-2 text-left"
+                      >Listen</th
+                    >
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
                     <td class="border border-gray-300 px-4 py-2">2022</td>
-                    <td class="border border-gray-300 px-4 py-2"><i>Finals Week</i></td>
+                    <td class="border border-gray-300 px-4 py-2"
+                      ><i>Finals Week</i></td
+                    >
                     <td class="border border-gray-300 px-4 py-2">Lo-Fi</td>
-                    <td class="border border-gray-300 px-4 py-2">S. Nagumalli</td>
-                    <td class="border border-gray-300 px-4 py-2">S. Nagumalli</td>
+                    <td class="border border-gray-300 px-4 py-2"
+                      >S. Nagumalli</td
+                    >
+                    <td class="border border-gray-300 px-4 py-2"
+                      >S. Nagumalli</td
+                    >
                     <td class="border border-gray-300 px-4 py-2">3:24</td>
                     <td class="border border-gray-300 px-4 py-2">
                       <div class="flex space-x-3">
-                        <a href="https://open.spotify.com/album/2PcR3h2W15bOrJNlVhBpJw" class="w-8 h-8 flex items-center justify-center bg-green-500 hover:bg-green-600 rounded-full shadow-sm transition duration-200" target="_blank" title="Listen on Spotify">
-                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" fill="white">
-                            <path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.48.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/>
+                        <a
+                          href="https://open.spotify.com/album/2PcR3h2W15bOrJNlVhBpJw"
+                          class="flex h-8 w-8 items-center justify-center rounded-full bg-green-500 shadow-sm transition duration-200 hover:bg-green-600"
+                          target="_blank"
+                          title="Listen on Spotify"
+                        >
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 24 24"
+                            width="16"
+                            height="16"
+                            fill="white"
+                          >
+                            <path
+                              d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.48.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"
+                            ></path>
                           </svg>
                         </a>
-                        <a href="https://music.youtube.com/" class="w-8 h-8 flex items-center justify-center bg-red-500 hover:bg-red-600 rounded-full shadow-sm transition duration-200" target="_blank" title="Listen on YouTube Music">
-                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="white">
-                            <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                        <a
+                          href="https://music.youtube.com/"
+                          class="flex h-8 w-8 items-center justify-center rounded-full bg-red-500 shadow-sm transition duration-200 hover:bg-red-600"
+                          target="_blank"
+                          title="Listen on YouTube Music"
+                        >
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 24 24"
+                            width="18"
+                            height="18"
+                            fill="white"
+                          >
+                            <path
+                              d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"
+                            ></path>
                           </svg>
                         </a>
                       </div>
@@ -231,82 +426,224 @@ const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
                   </tr>
                   <tr>
                     <td class="border border-gray-300 px-4 py-2">2024</td>
-                    <td class="border border-gray-300 px-4 py-2"><i>Hey Grace (Love Song)</i></td>
+                    <td class="border border-gray-300 px-4 py-2"
+                      ><i>Hey Grace (Love Song)</i></td
+                    >
                     <td class="border border-gray-300 px-4 py-2">Pop</td>
-                    <td class="border border-gray-300 px-4 py-2">S. Nagumalli, D. Wilson</td>
-                    <td class="border border-gray-300 px-4 py-2">S. Nagumalli, Blue Mirror</td>
+                    <td class="border border-gray-300 px-4 py-2"
+                      >Suyash Nagumalli</td
+                    >
+                    <td class="border border-gray-300 px-4 py-2"
+                      >Suyash Nagumalli, Blue Mirror</td
+                    >
                     <td class="border border-gray-300 px-4 py-2">4:12</td>
                     <td class="border border-gray-300 px-4 py-2">
                       <div class="flex space-x-3">
-                        <a href="https://open.spotify.com/album/2PcR3h2W15bOrJNlVhBpJw" class="w-8 h-8 flex items-center justify-center bg-green-500 hover:bg-green-600 rounded-full shadow-sm transition duration-200" target="_blank" title="Listen on Spotify">
-                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" fill="white">
-                            <path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.48.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/>
+                        <a
+                          href="https://open.spotify.com/album/2PcR3h2W15bOrJNlVhBpJw"
+                          class="flex h-8 w-8 items-center justify-center rounded-full bg-green-500 shadow-sm transition duration-200 hover:bg-green-600"
+                          target="_blank"
+                          title="Listen on Spotify"
+                        >
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 24 24"
+                            width="16"
+                            height="16"
+                            fill="white"
+                          >
+                            <path
+                              d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.48.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"
+                            ></path>
                           </svg>
                         </a>
-                        <a href="https://music.youtube.com/" class="w-8 h-8 flex items-center justify-center bg-red-500 hover:bg-red-600 rounded-full shadow-sm transition duration-200" target="_blank" title="Listen on YouTube Music">
-                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="white">
-                            <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                        <a
+                          href="https://music.youtube.com/"
+                          class="flex h-8 w-8 items-center justify-center rounded-full bg-red-500 shadow-sm transition duration-200 hover:bg-red-600"
+                          target="_blank"
+                          title="Listen on YouTube Music"
+                        >
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 24 24"
+                            width="18"
+                            height="18"
+                            fill="white"
+                          >
+                            <path
+                              d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"
+                            ></path>
                           </svg>
                         </a>
-                      </a>
                       </div>
-                      </td>
-                      </tr>
-                      </tbody>
-                      </table>
-                      </div>
-                      </div>
-                      </div>
-               
-                      <br>
-          <div>
-            <h2 class="text-xl font-semibold border-b border-gray-300 pb-1 mb-3">Philanthropy and community service</h2>
-            <p>
-              Beyond his academic and professional pursuits, Suyash has been involved in educational initiatives for underprivileged children. He tutored mathematics to children at a local government school in India as part of an after-school program, providing them with the individual attention they needed. He also worked with academically strong students to help them prepare for competitive exams.
-            </p>
-            <p>
-              To promote educational equity, Suyash shared videos of his tutoring sessions on social media, encouraging others with education to contribute similarly to help disadvantaged children around the world receive the education they deserve.
-            </p>
-          </div>
-          
-          <br>
-          <div>
-            <h2 class="text-xl font-semibold border-b border-gray-300 pb-1 mb-3">Personal life</h2>
-            <p>
-              When he's not coding or composing, Suyash is a marathon runner, cultural performer, and storyteller.
-              He brings together music, visuals, and software to craft rich narratives — with a long-term dream of composing for Bollywood and Tollywood films while building impactful digital experiences.
-            </p>
-          </div>
-          
-          <br>
-          <!-- Wikipedia-style references section -->
-          <div>
-            <h2 class="text-xl font-semibold border-b border-gray-300 pb-1 mb-3">References</h2>
-            <ol class="list-decimal pl-6 text-sm">
-              <li id="ref1" class="mb-2">
-                <a class="link" href="https://cs.illinois.edu/news/a-summers-worth-of-research-spending-8-weeks-as-jump-arches-interns">
-                  "A Summer's Worth of Research: Spending 8 Weeks as Jump ARCHES Interns", Computer Science, UIUC
-                </a>
-              </li>
-              <li id="ref2" class="mb-2">
-                <a class="link" href="https://healtheng.illinois.edu/news/48484">
-                  "HCESC Jump ARCHES Summer Interns: Suyash Nagumalli", Health Care Engineering Systems Center, Illinois
-                </a>
-              </li>
-              <li id="ref3" class="mb-2">
-                <a class="link" href="https://www.chicagotribune.com/2023/08/04/naperville-news-digest-all-city-tennis-tournament-champs-finalists-announced-annual-witches-night-out-benefit-being-held-at-the-matrix-naperville-student-wins-best-business-innovation-award/">
-                  "Naperville News Digest: Naperville student wins Best Business Innovation Award", Chicago Tribune, August 4, 2023
-                </a>
-              </li>
-              <li id="ref5" class="mb-2">
-                <a class="link" href="https://open.spotify.com/artist/2BgWmJmyhRQnzYvze1bUxZ?si=YRhr1p-RQEikiKYFZDMOlQ">
-                  Suyash Nagumalli, Spotify Artist Profile
-                </a>
-              </li>
-            </ol>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
           </div>
         </div>
-        
+
+        <br />
+        <div>
+          <h2 class="mb-3 border-b border-gray-300 pb-1 text-xl font-semibold">
+            Philanthropy and community service
+          </h2>
+          <p>
+            Beyond his academic and professional pursuits, Suyash has been
+            involved in educational initiatives for underprivileged children. He
+            tutored mathematics to children at a local government school in
+            India as part of an after-school program, providing them with the
+            individual attention they needed. He also worked with academically
+            strong students to help them prepare for competitive exams.
+          </p>
+          <p>
+            To promote educational equity, Suyash shared videos of his tutoring
+            sessions on social media, encouraging others with education to
+            contribute similarly to help disadvantaged children around the world
+            receive the education they deserve.
+          </p>
+        </div>
+
+        <br />
+        <div>
+          <h2 class="mb-3 border-b border-gray-300 pb-1 text-xl font-semibold">
+            Personal life
+          </h2>
+          <p>
+            When he's not programming or playing music, Suyash is training for
+            his first marathon. He likes to pick up new hobbies, and explore
+            interests such as learning to <a
+              class="link"
+              href="https://en.wikipedia.org/wiki/3D_printing"
+              target="_blank">3D print</a
+            >, learning the <a
+              class="link"
+              href="https://en.wikipedia.org/wiki/Splits_(gymnastics)"
+              target="_blank">splits</a
+            >, training for his first <a
+              class="link"
+              href="https://en.wikipedia.org/wiki/Muscle-up"
+              target="_blank">muscle-up</a
+            >. He is currently listening to a variety of <a
+              class="link"
+              href="https://www.podcastindex.org/"
+              target="_blank">podcasts</a
+            >. <a
+              class="link"
+              href="https://www.youtube.com/watch?v=qJrhMvTBhZ8"
+              target="_blank">Lex Fridman’s episode with Narendra Modi</a
+            > is one of his most favorite podcasts. He also enjoys watching <a
+              class="link"
+              href="https://www.youtube.com"
+              target="_blank">YouTube</a
+            > content. Some of his favorite people are Comedian <a
+              class="link"
+              href="https://www.instagram.com/morganjaycomedy/"
+              target="_blank">Morgan Jay</a
+            >, <a
+              class="link"
+              href="https://www.youtube.com/user/KSI"
+              target="_blank">KSI</a
+            >, <a
+              class="link"
+              href="https://www.instagram.com/bradysheperd/"
+              target="_blank">Brady Sheperd</a
+            >, <a
+              class="link"
+              href="https://www.youtube.com/user/mkbhd"
+              target="_blank">MKBHD</a
+            >, and <a
+              class="link"
+              href="https://www.youtube.com/c/lexfridman"
+              target="_blank">Lex Fridman</a
+            >. He is a former <a
+              class="link"
+              href="https://www.formula1.com/"
+              target="_blank">Formula 1</a
+            > fan, until they brought on the Netflix show <a
+              class="link"
+              href="https://www.netflix.com/in/title/80204890"
+              target="_blank">Drive to Survive</a
+            > and the sport became mainstream. He loves watching movies and disappearing
+            into the creative world, fully immersed in the story. One of his favorite
+            movies is <i
+              ><a
+                class="link"
+                href="https://www.imdb.com/title/tt3783958/"
+                target="_blank">La La Land</a
+              ></i
+            >. His favorite actor is <a
+              class="link"
+              href="https://en.wikipedia.org/wiki/Hrithik_Roshan"
+              target="_blank">Hrithik Roshan</a
+            >, and he has a big sweet tooth. His favorite chocolate is <a
+              class="link"
+              href="https://www.hersheys.com/"
+              target="_blank">Hershey's</a
+            >, his favorite candy is <a
+              class="link"
+              href="https://www.sourpatchkids.com/"
+              target="_blank">Sour Patch Kids</a
+            >, his favorite gum is <a
+              class="link"
+              href="https://5gum.com/"
+              target="_blank">5 Gum Spearmint</a
+            >, and his favorite sweets are <a
+              class="link"
+              href="https://en.wikipedia.org/wiki/Kaju_katli"
+              target="_blank">Kaju Katli</a
+            > and <a
+              class="link"
+              href="https://en.wikipedia.org/wiki/Custard"
+              target="_blank">Custard</a
+            >. His favorite colors are purple, black, sometimes blue, with red
+            as an accent color. He enjoys listening to music and will analyze
+            the arrangements and look. He is currently single.
+          </p>
+        </div>
+
+        <br />
+        <!-- Wikipedia-style references section -->
+        <div>
+          <h2 class="mb-3 border-b border-gray-300 pb-1 text-xl font-semibold">
+            References
+          </h2>
+          <ol class="list-decimal pl-6 text-sm">
+            <li id="ref1" class="mb-2">
+              <a
+                class="link"
+                href="https://cs.illinois.edu/news/a-summers-worth-of-research-spending-8-weeks-as-jump-arches-interns"
+              >
+                "A Summer's Worth of Research: Spending 8 Weeks as Jump ARCHES
+                Interns", Computer Science, UIUC
+              </a>
+            </li>
+            <li id="ref2" class="mb-2">
+              <a class="link" href="https://healtheng.illinois.edu/news/48484">
+                "HCESC Jump ARCHES Summer Interns: Suyash Nagumalli", Health
+                Care Engineering Systems Center, Illinois
+              </a>
+            </li>
+            <li id="ref3" class="mb-2">
+              <a
+                class="link"
+                href="https://www.chicagotribune.com/2023/08/04/naperville-news-digest-all-city-tennis-tournament-champs-finalists-announced-annual-witches-night-out-benefit-being-held-at-the-matrix-naperville-student-wins-best-business-innovation-award/"
+              >
+                "Naperville News Digest: Naperville student wins Best Business
+                Innovation Award", Chicago Tribune, August 4, 2023
+              </a>
+            </li>
+            <li id="ref5" class="mb-2">
+              <a
+                class="link"
+                href="https://open.spotify.com/artist/2BgWmJmyhRQnzYvze1bUxZ?si=YRhr1p-RQEikiKYFZDMOlQ"
+              >
+                Suyash Nagumalli, Spotify Artist Profile
+              </a>
+            </li>
+          </ol>
+        </div>
       </div>
     </section>
   </main>
@@ -321,11 +658,167 @@ const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
       sessionStorage.setItem("backUrl", "/");
     }
 
-    const video = document.querySelector(".background-video") as HTMLVideoElement;
-    if (video) {
-      video.play().catch((error) => {
-        console.error("Video playback failed:", error);
-      });
+    const video = document.querySelector(".video-element") as HTMLVideoElement;
+    if (video && video.paused) {
+      video.play();
     }
+  });
+</script>
+
+<script>
+  // First, add a style block in the layout or in the page
+  document.addEventListener("astro:page-load", () => {
+    // Execute after the main page script runs
+    setTimeout(() => {
+      // Create a style element for our CSS
+      const styleElement = document.createElement("style");
+      styleElement.textContent = `
+    .star {
+      position: fixed;
+      pointer-events: none;
+      width: 10px;
+      height: 10px;
+      background: transparent;
+      z-index: 9999;
+      animation: moveStar 1.5s linear forwards;
+    }
+
+    @keyframes moveStar {
+      0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-100px) rotate(360deg);
+        opacity: 0;
+      }
+    }
+
+    /* Create star shape using CSS */
+    .star:before {
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      width: 100%;
+      height: 100%;
+      clip-path: polygon(
+        50% 0%, 61% 35%, 98% 35%, 68% 57%,
+        79% 91%, 50% 70%, 21% 91%, 32% 57%,
+        2% 35%, 39% 35%
+      );
+      transform: translate(-50%, -50%);
+    }
+
+    .star:before {
+      width: 100%;
+      height: 100%;
+    }
+
+    .star:after {
+      width: 100%;
+      height: 100%;
+      transform: rotate(45deg);
+    }
+  `;
+      document.head.appendChild(styleElement);
+
+      // Function to create stars
+      function createStar(x: number, y: number) {
+        // Only create stars in the margins (left or right 15% of screen)
+        const windowWidth = window.innerWidth;
+        const marginWidth = windowWidth * 0.2;
+
+        if (window.innerWidth < 1000) {
+          // Optionally disable star creation on very small screens
+          return;
+        }
+
+        if (x < marginWidth || x > windowWidth - marginWidth) {
+          const star = document.createElement("div");
+          star.className = "star";
+
+          // Randomize star size
+          const size = 6 + Math.random() * 8;
+          star.style.width = `${size}px`;
+          star.style.height = `${size}px`;
+
+          // Position the star at mouse position
+          star.style.left = `${x}px`;
+          star.style.top = `${y}px`;
+
+          // Add some randomness to animation duration
+          const duration = 1 + Math.random() * 1;
+          star.style.animationDuration = `${duration}s`;
+
+          // Randomly select a color from blue/purple palette
+          const colors = [
+            "#4d94ff", // light blue
+            "#1e90ff", // dodger blue
+            "#0000cd", // medium blue
+            "#8a2be2", // blue violet
+            "#9370db", // medium purple
+            "#6a5acd", // slate blue
+            "#7b68ee", // medium slate blue
+            "#9966cc", // amethyst
+            "#ffd700",
+          ];
+          const randomColor = colors[Math.floor(Math.random() * colors.length)];
+
+          // Create and apply a style element for this specific star
+          const styleEl = document.createElement("style");
+          const uniqueId =
+            "star-" + Date.now() + "-" + Math.floor(Math.random() * 1000);
+          star.id = uniqueId;
+
+          styleEl.textContent = `
+        #${uniqueId}:before {
+          background-color: ${randomColor};
+        }
+      `;
+          document.head.appendChild(styleEl);
+
+          // Add to DOM
+          document.body.appendChild(star);
+
+          // Remove star and its style after animation completes
+          setTimeout(() => {
+            document.head.removeChild(styleEl);
+            star.remove();
+          }, duration * 1000);
+        }
+      }
+
+      // Track mouse position and create stars
+      let lastX = 0;
+      let lastY = 0;
+      let throttleTimer: NodeJS.Timeout | null = null;
+
+      function throttledStarCreation(e: MouseEvent) {
+        const currentX = e.clientX;
+        const currentY = e.clientY;
+
+        // Calculate distance moved
+        const distance = Math.sqrt(
+          Math.pow(currentX - lastX, 2) + Math.pow(currentY - lastY, 2)
+        );
+
+        // Only create stars if mouse has moved a certain distance
+        if (distance > 5) {
+          createStar(currentX, currentY);
+          lastX = currentX;
+          lastY = currentY;
+        }
+      }
+
+      document.addEventListener("mousemove", e => {
+        if (!throttleTimer) {
+          throttleTimer = setTimeout(() => {
+            throttleTimer = null;
+            throttledStarCreation(e);
+          }, 30); // Limit to creating stars every 30ms
+        }
+      });
+    }, 100); // Small delay to ensure main scripts run first
   });
 </script>
