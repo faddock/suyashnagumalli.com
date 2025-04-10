@@ -7,8 +7,7 @@ featured: false
 draft: false
 tags:
   - Finance
-description:
-  Some general rules for investing and finance to stay financially stable.
+description: Some general rules for investing and finance to stay financially stable.
 ---
 
 # Nine Personal Finance Rules from Dad
@@ -23,8 +22,8 @@ This rule tells you how many years it’ll take to double your money at a given 
 
 **Formula:** `72 ÷ Interest Rate = Years to Double`
 
-- At 8% interest → 72 ÷ 8 = 9 years  
-- At 6% interest → 72 ÷ 6 = 12 years  
+- At 8% interest → 72 ÷ 8 = 9 years
+- At 6% interest → 72 ÷ 6 = 12 years
 - At 9% interest → 72 ÷ 9 = 8 years
 
 ---
@@ -46,9 +45,9 @@ Estimate the retirement corpus needed.
 **Corpus Required = 25 × Annual Expenses**  
 **Withdrawal = 4% annually**
 
-- If annual expenses = ₹5,00,000 → Corpus = ₹1.25 crore  
-- 50% in fixed income, 50% in equity  
-- Withdraw ₹5 lakhs annually  
+- If annual expenses = ₹5,00,000 → Corpus = ₹1.25 crore
+- 50% in fixed income, 50% in equity
+- Withdraw ₹5 lakhs annually
 
 Works 96% of the time over a 30-year retirement.
 
@@ -60,7 +59,7 @@ Used for deciding equity vs. debt allocation.
 
 **Formula:** `100 - Your Age = % in Equity`
 
-- Age 30 → 70% Equity, 30% Debt  
+- Age 30 → 70% Equity, 30% Debt
 - Age 60 → 40% Equity, 60% Debt
 
 ---
@@ -69,8 +68,8 @@ Used for deciding equity vs. debt allocation.
 
 Expected returns from different asset classes:
 
-- **10%** – Equity / Mutual Funds  
-- **5%** – Debt instruments / FDs  
+- **10%** – Equity / Mutual Funds
+- **5%** – Debt instruments / FDs
 - **3%** – Savings Account
 
 ---
@@ -79,8 +78,8 @@ Expected returns from different asset classes:
 
 Divide monthly income as:
 
-- **50%** – Needs (Rent, groceries, EMIs)  
-- **30%** – Wants (Travel, entertainment)  
+- **50%** – Needs (Rent, groceries, EMIs)
+- **30%** – Wants (Travel, entertainment)
 - **20%** – Savings (Equity, FDs, Mutual Funds)
 
 Try to save at least 20% of your income.
@@ -119,23 +118,23 @@ Ensures your family’s financial security.
 
 ## Bonus Tips
 
-- **Spend using secondary income** (e.g., rent, dividends)  
-- **Invest your primary income** to grow wealth  
+- **Spend using secondary income** (e.g., rent, dividends)
+- **Invest your primary income** to grow wealth
 
 ---
 
 ### Mutual Fund Types
 
-- **Large Cap (e.g., Reliance):** Stable, moderate returns  
+- **Large Cap (e.g., Reliance):** Stable, moderate returns
 - **Small Cap:** Higher risk, higher potential return
 
 ---
 
 ### Platforms to Explore
 
-- **Fidelity**  
-- **Vanguard**  
-- **Charles Schwab**  
+- **Fidelity**
+- **Vanguard**
+- **Charles Schwab**
 - **Goldman Sachs**
 
 Check for **entry/exit fees** before investing.
@@ -144,7 +143,7 @@ Check for **entry/exit fees** before investing.
 
 ### Wealth Habit
 
-> 💡 *Invest 10% of your weekly income every Monday.*
+> 💡 _Invest 10% of your weekly income every Monday._
 
 Builds discipline and averages out market volatility.
 
