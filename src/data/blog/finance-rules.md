@@ -10,16 +10,13 @@ tags:
 description: Some general rules for investing and finance to stay financially stable.
 ---
 
-# Nine Personal Finance Rules from Dad
-
 Whether you're a student, a working professional, or retired, these timeless finance principles can help you stay financially healthy and plan better for your future.
 
 ---
 
-## 1. Rule of 72 – Double Your Money
+### 1. Rule of 72 – Double Your Money
 
-This rule tells you how many years it’ll take to double your money at a given annual return rate.
-
+This rule tells you how many years it’ll take to double your money at a given annual return rate.  
 **Formula:** `72 ÷ Interest Rate = Years to Double`
 
 - At 8% interest → 72 ÷ 8 = 9 years
@@ -28,20 +25,18 @@ This rule tells you how many years it’ll take to double your money at a given 
 
 ---
 
-## 2. Rule of 70 – Understand Inflation's Impact
+### 2. Rule of 70 – Understand Inflation's Impact
 
-Helps estimate how long it takes for the value of money to halve due to inflation.
-
+Helps estimate how long it takes for the value of money to halve due to inflation.  
 **Formula:** `70 ÷ Inflation Rate = Years until Value Halves`
 
 - At 7% inflation → 70 ÷ 7 = 10 years
 
 ---
 
-## 3. 4% Withdrawal Rule – Financial Freedom Planning
+### 3. 4% Withdrawal Rule – Financial Freedom Planning
 
-Estimate the retirement corpus needed.
-
+Estimate the retirement corpus needed.  
 **Corpus Required = 25 × Annual Expenses**  
 **Withdrawal = 4% annually**
 
@@ -53,10 +48,9 @@ Works 96% of the time over a 30-year retirement.
 
 ---
 
-## 4. 100 Minus Age Rule – Asset Allocation
+### 4. 100 Minus Age Rule – Asset Allocation
 
-Used for deciding equity vs. debt allocation.
-
+Used for deciding equity vs. debt allocation.  
 **Formula:** `100 - Your Age = % in Equity`
 
 - Age 30 → 70% Equity, 30% Debt
@@ -64,59 +58,61 @@ Used for deciding equity vs. debt allocation.
 
 ---
 
-## 5. 10-5-3 Rule – Set Realistic Expectations
+### 5. 10-5-3 Rule – Set Realistic Expectations
 
-Expected returns from different asset classes:
-
+<<<<<<< Updated upstream
 - **10%** – Equity / Mutual Funds
 - **5%** – Debt instruments / FDs
+=======
+Expected returns from different asset classes:  
+- **10%** – Equity / Mutual Funds  
+- **5%** – Debt instruments / FDs  
+>>>>>>> Stashed changes
 - **3%** – Savings Account
 
 ---
 
-## 6. 50-30-20 Rule – Income Allocation
+### 6. 50-30-20 Rule – Income Allocation
 
-Divide monthly income as:
-
+<<<<<<< Updated upstream
 - **50%** – Needs (Rent, groceries, EMIs)
 - **30%** – Wants (Travel, entertainment)
+=======
+Divide monthly income as:  
+- **50%** – Needs (Rent, groceries, EMIs)  
+- **30%** – Wants (Travel, entertainment)  
+>>>>>>> Stashed changes
 - **20%** – Savings (Equity, FDs, Mutual Funds)
 
 Try to save at least 20% of your income.
 
 ---
 
-## 7. 3X Emergency Fund Rule
+### 7. 3X Emergency Fund Rule
 
-Build an emergency fund of at least:
-
-**3× Monthly Income** (Preferably 6×)
-
+Build an emergency fund of at least:  
+**3× Monthly Income** (Preferably 6×)  
 Helps during job loss, medical emergency, etc.
 
 ---
 
-## 8. 40% EMI Rule – Loan Safety
+### 8. 40% EMI Rule – Loan Safety
 
-Don’t spend more than 40% of your income on EMIs.
-
-- Income = ₹50,000 → EMI should ≤ ₹20,000
-
+Don’t spend more than 40% of your income on EMIs.  
+- Income = ₹50,000 → EMI should ≤ ₹20,000  
 Used by banks to assess loan eligibility.
 
 ---
 
-## 9. Life Insurance Rule – Secure Your Family
+### 9. Life Insurance Rule – Secure Your Family
 
-**Coverage = 20 × Annual Income**
-
-- Income = ₹5,00,000 → Insurance = ₹1 crore
-
+**Coverage = 20 × Annual Income**  
+- Income = ₹5,00,000 → Insurance = ₹1 crore  
 Ensures your family’s financial security.
 
 ---
 
-## Bonus Tips
+### Bonus Tips
 
 - **Spend using secondary income** (e.g., rent, dividends)
 - **Invest your primary income** to grow wealth
