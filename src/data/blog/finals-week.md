@@ -8,8 +8,8 @@ draft: false
 tags:
   - poems
 ogImage: ../../assets/images/poetry.png
-description: test
+description: Work in Progress...
 canonicalURL: https://example.org/my-article-was-already-posted-here
 ---
 
-## test
+Work in Progress...

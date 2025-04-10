@@ -8,8 +8,8 @@ draft: false
 tags:
   - poems
 ogImage: ../../assets/images/poetry.png
-description: asdf
+description: The story behind Hey Grace
 canonicalURL: https://example.org/my-article-was-already-posted-here
 ---
 
-WIP
+Work in Progress...
