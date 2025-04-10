@@ -60,28 +60,20 @@ Used for deciding equity vs. debt allocation.
 
 ### 5. 10-5-3 Rule – Set Realistic Expectations
 
-<<<<<<< Updated upstream
+Expected returns from different asset classes:
+
 - **10%** – Equity / Mutual Funds
 - **5%** – Debt instruments / FDs
-=======
-Expected returns from different asset classes:  
-- **10%** – Equity / Mutual Funds  
-- **5%** – Debt instruments / FDs  
->>>>>>> Stashed changes
 - **3%** – Savings Account
 
 ---
 
 ### 6. 50-30-20 Rule – Income Allocation
 
-<<<<<<< Updated upstream
+Divide monthly income as:
+
 - **50%** – Needs (Rent, groceries, EMIs)
 - **30%** – Wants (Travel, entertainment)
-=======
-Divide monthly income as:  
-- **50%** – Needs (Rent, groceries, EMIs)  
-- **30%** – Wants (Travel, entertainment)  
->>>>>>> Stashed changes
 - **20%** – Savings (Equity, FDs, Mutual Funds)
 
 Try to save at least 20% of your income.
@@ -98,17 +90,19 @@ Helps during job loss, medical emergency, etc.
 
 ### 8. 40% EMI Rule – Loan Safety
 
-Don’t spend more than 40% of your income on EMIs.  
+Don’t spend more than 40% of your income on EMIs.
+
 - Income = ₹50,000 → EMI should ≤ ₹20,000  
-Used by banks to assess loan eligibility.
+  Used by banks to assess loan eligibility.
 
 ---
 
 ### 9. Life Insurance Rule – Secure Your Family
 
-**Coverage = 20 × Annual Income**  
+**Coverage = 20 × Annual Income**
+
 - Income = ₹5,00,000 → Insurance = ₹1 crore  
-Ensures your family’s financial security.
+  Ensures your family’s financial security.
 
 ---
 
