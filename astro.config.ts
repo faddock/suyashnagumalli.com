@@ -9,6 +9,9 @@ import { SITE } from "./src/config";
 
 // https://astro.build/config
 export default defineConfig({
+  redirects: {
+    "/resume": "/" + SITE.resume_filename,
+  },
   site: SITE.website,
   integrations: [
     sitemap({

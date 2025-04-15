@@ -13,7 +13,7 @@ import Footer from "@/components/Footer.astro";
 import Ben10 from "@/assets/videos/ben10small.mp4";
 // import BabyGolf from "@/assets/images/babygolf.jpg";
 import DSC07399 from "@/assets/images/DSC07399.jpg";
-// import { SITE } from "@/config";
+import { SITE } from "@/config";
 // import { SOCIALS } from "@/constants";
 
 // const posts = await getCollection("blog");
@@ -84,10 +84,8 @@ import DSC07399 from "@/assets/images/DSC07399.jpg";
           >
           <br />
           Stalk him:
-          <a
-            class="link"
-            href="/Suyash_Nagumalli_Resume_SP25.pdf"
-            target="_blank">Resume</a
+          <a class="link" href={`/${SITE.resume_filename}`} target="_blank"
+            >Resume</a
           > |
           <a
             class="link"

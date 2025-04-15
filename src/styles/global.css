@@ -11,13 +11,13 @@
 } */
 :root,
 html[data-theme="light"] {
-  --background: #fafafc;
+  --background: #f9f9fd;
   --foreground: #1e1b2e;
-  --accent: #7e22ce;
-  --muted: #ede9fe;
-  --border: #c4b5fd;
-  --link-color: #7e22ce; /* Match purple accent */
-  --link-hover-bg: #7e22ce;
+  --accent: #355abf;
+  --muted: #e9eefe;
+  --border: #b5b8fd;
+  --link-color: #355abf; /* Match purple accent */
+  --link-hover-bg: #355abf;
   --link-hover-text: white;
 }
 
