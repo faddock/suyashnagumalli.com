@@ -12,23 +12,23 @@
 :root,
 html[data-theme="light"] {
   --background: #f9f9fd;
-  --foreground: #1e1b2e;
-  --accent: #355abf;
+  --foreground: #1e1b2e;  
+  --accent: #1D58A7;
   --muted: #e9eefe;
   --border: #b5b8fd;
-  --link-color: #355abf; /* Match purple accent */
-  --link-hover-bg: #355abf;
+  --link-color: #6859c7; /* Match purple accent */
+  --link-hover-bg: #1D58A7;
   --link-hover-text: white;
 }
 
 html[data-theme="dark"] {
-  --background: #212737;
+  --background: #13294B;
   --foreground: #eaedf3;
-  --accent: #ff6b01;
+  --accent: #FF5F05;
   --muted: #343f60bf;
   --border: #ab4b08;
-  --link-color: #ff6b01; /* Match orange accent */
-  --link-hover-bg: #ff6b01;
+  --link-color: #FF5F05; /* Match orange accent */
+  --link-hover-bg: #FF5F05;
   --link-hover-text: white; /* Dark background for contrast */
 }
 @theme inline {

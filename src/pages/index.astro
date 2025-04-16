@@ -664,159 +664,143 @@ import { SITE } from "@/config";
 </script>
 
 <script>
-  // First, add a style block in the layout or in the page
-  document.addEventListener("astro:page-load", () => {
-    // Execute after the main page script runs
-    setTimeout(() => {
-      // Create a style element for our CSS
-      const styleElement = document.createElement("style");
-      styleElement.textContent = `
-    .star {
-      position: fixed;
-      pointer-events: none;
-      width: 10px;
-      height: 10px;
-      background: transparent;
-      z-index: 9999;
-      animation: moveStar 1.5s linear forwards;
-    }
+document.addEventListener("astro:page-load", () => {
+  // If a previous mousemove listener exists, remove it.
+  if (window.__starMouseHandler) {
+    document.removeEventListener("mousemove", window.__starMouseHandler);
+  }
 
-    @keyframes moveStar {
-      0% {
-        transform: translateY(0) rotate(0deg);
-        opacity: 1;
+  // Delay to ensure main scripts run first
+  setTimeout(() => {
+    // Create and insert style element for star animations
+    const styleElement = document.createElement("style");
+    styleElement.textContent = `
+      @-webkit-keyframes moveStar {
+        0% { -webkit-transform: translateY(0) rotate(0deg); transform: translateY(0) rotate(0deg); opacity: 1; }
+        100% { -webkit-transform: translateY(-100px) rotate(360deg); transform: translateY(-100px) rotate(360deg); opacity: 0; }
       }
-      100% {
-        transform: translateY(-100px) rotate(360deg);
-        opacity: 0;
+      @keyframes moveStar {
+        0% { -webkit-transform: translateY(0) rotate(0deg); transform: translateY(0) rotate(0deg); opacity: 1; }
+        100% { -webkit-transform: translateY(-70px) rotate(360deg); transform: translateY(-70px) rotate(360deg); opacity: 0; }
       }
-    }
-
-    /* Create star shape using CSS */
-    .star:before {
-      content: '';
-      position: absolute;
-      left: 50%;
-      top: 50%;
-      width: 100%;
-      height: 100%;
-      clip-path: polygon(
-        50% 0%, 61% 35%, 98% 35%, 68% 57%,
-        79% 91%, 50% 70%, 21% 91%, 32% 57%,
-        2% 35%, 39% 35%
-      );
-      transform: translate(-50%, -50%);
-    }
-
-    .star:before {
-      width: 100%;
-      height: 100%;
-    }
-
-    .star:after {
-      width: 100%;
-      height: 100%;
-      transform: rotate(45deg);
-    }
-  `;
-      document.head.appendChild(styleElement);
-
-      // Function to create stars
-      function createStar(x: number, y: number) {
-        // Only create stars in the margins (left or right 15% of screen)
-        const windowWidth = window.innerWidth;
-        const marginWidth = windowWidth * 0.2;
-
-        if (window.innerWidth < 1000) {
-          // Optionally disable star creation on very small screens
-          return;
-        }
-
-        if (x < marginWidth || x > windowWidth - marginWidth) {
-          const star = document.createElement("div");
-          star.className = "star";
-
-          // Randomize star size
-          const size = 6 + Math.random() * 8;
-          star.style.width = `${size}px`;
-          star.style.height = `${size}px`;
-
-          // Position the star at mouse position
-          star.style.left = `${x}px`;
-          star.style.top = `${y}px`;
-
-          // Add some randomness to animation duration
-          const duration = 1 + Math.random() * 1;
-          star.style.animationDuration = `${duration}s`;
-
-          // Randomly select a color from blue/purple palette
-          const colors = [
-            "#4d94ff", // light blue
-            "#1e90ff", // dodger blue
-            "#0000cd", // medium blue
-            "#8a2be2", // blue violet
-            "#9370db", // medium purple
-            "#6a5acd", // slate blue
-            "#7b68ee", // medium slate blue
-            "#9966cc", // amethyst
-            "#ffd700",
-          ];
-          const randomColor = colors[Math.floor(Math.random() * colors.length)];
-
-          // Create and apply a style element for this specific star
-          const styleEl = document.createElement("style");
-          const uniqueId =
-            "star-" + Date.now() + "-" + Math.floor(Math.random() * 1000);
-          star.id = uniqueId;
-
-          styleEl.textContent = `
-        #${uniqueId}:before {
-          background-color: ${randomColor};
-        }
-      `;
-          document.head.appendChild(styleEl);
-
-          // Add to DOM
-          document.body.appendChild(star);
-
-          // Remove star and its style after animation completes
-          setTimeout(() => {
-            document.head.removeChild(styleEl);
-            star.remove();
-          }, duration * 1000);
-        }
+      .star {
+        position: fixed;
+        pointer-events: none;
+        width: 10px;
+        height: 10px;
+        background: transparent;
+        z-index: 9999;
+        -webkit-animation: moveStar 1.5s linear forwards;
+                animation: moveStar 1.5s linear forwards;
       }
-
-      // Track mouse position and create stars
-      let lastX = 0;
-      let lastY = 0;
-      let throttleTimer: NodeJS.Timeout | null = null;
-
-      function throttledStarCreation(e: MouseEvent) {
-        const currentX = e.clientX;
-        const currentY = e.clientY;
-
-        // Calculate distance moved
-        const distance = Math.sqrt(
-          Math.pow(currentX - lastX, 2) + Math.pow(currentY - lastY, 2)
+      .star:before {
+        content: '';
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        width: 100%;
+        height: 100%;
+        clip-path: polygon(
+          50% 0%, 61% 35%, 98% 35%, 68% 57%,
+          79% 91%, 50% 70%, 21% 91%, 32% 57%,
+          2% 35%, 39% 35%
         );
-
-        // Only create stars if mouse has moved a certain distance
-        if (distance > 5) {
-          createStar(currentX, currentY);
-          lastX = currentX;
-          lastY = currentY;
-        }
+        transform: translate(-50%, -50%);
       }
+      .star:after {
+        width: 100%;
+        height: 100%;
+        transform: rotate(45deg);
+      }
+    `;
+    document.head.appendChild(styleElement);
 
-      document.addEventListener("mousemove", e => {
-        if (!throttleTimer) {
-          throttleTimer = setTimeout(() => {
-            throttleTimer = null;
-            throttledStarCreation(e);
-          }, 30); // Limit to creating stars every 30ms
-        }
-      });
-    }, 100); // Small delay to ensure main scripts run first
-  });
+    // Star creation function remains similar to your original
+    function createStar(x, y) {
+      const windowWidth = window.innerWidth;
+      const marginWidth = windowWidth * 0.2;
+      if (windowWidth < 1000) return;
+
+      // Create stars only in the margin areas
+      if (x < marginWidth || x > windowWidth - marginWidth) {
+        const star = document.createElement("div");
+        star.className = "star";
+
+        // Randomize star size
+        const size = 6 + Math.random() * 8;
+        star.style.width = `${size}px`;
+        star.style.height = `${size}px`;
+        star.style.left = `${x}px`;
+        star.style.top = `${y}px`;
+
+        // Randomize animation duration
+        const duration = 3 + Math.random();
+        star.style.animationDuration = `${duration}s`;
+
+        // Random color selection from your palette
+        const colors = [
+          "#4d94ff",
+          "#1e90ff",
+          "#1D58A7",
+          "#8a2be2",
+          "#9370db",
+          "#6a5acd",
+          "#7b68ee",
+          "#9966cc",
+          "#ffd700"
+        ];
+        const randomColor = colors[Math.floor(Math.random() * colors.length)];
+
+        // Give the star a unique ID to style its pseudo-element
+        const uniqueId = "star-" + Date.now() + "-" + Math.floor(Math.random() * 1000);
+        star.id = uniqueId;
+        const starStyle = document.createElement("style");
+        starStyle.textContent = `
+          #${uniqueId}:before {
+            background-color: ${randomColor};
+          }
+        `;
+        document.head.appendChild(starStyle);
+
+        document.body.appendChild(star);
+
+        // Clean up the star element and its style after animation
+        setTimeout(() => {
+          starStyle.remove();
+          star.remove();
+        }, duration * 1000);
+      }
+    }
+
+    let lastX = 0;
+    let lastY = 0;
+    let throttleTimer = null;
+
+    // Throttled star creation to limit how often stars are spawned
+    const throttledStarCreation = (e) => {
+      const currentX = e.clientX;
+      const currentY = e.clientY;
+      const distance = Math.sqrt((currentX - lastX) ** 2 + (currentY - lastY) ** 2);
+
+      if (distance > 5) {
+        createStar(currentX, currentY);
+        lastX = currentX;
+        lastY = currentY;
+      }
+    };
+
+    // Create and store the new event handler globally
+    window.__starMouseHandler = (e) => {
+      if (!throttleTimer) {
+        throttleTimer = setTimeout(() => {
+          throttleTimer = null;
+          throttledStarCreation(e);
+        }, 30);
+      }
+    };
+
+    // Attach the event listener for the current page instance
+    document.addEventListener("mousemove", window.__starMouseHandler);
+  }, 100);
+});
 </script>
