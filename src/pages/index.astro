@@ -649,6 +649,12 @@ import { SITE } from "@/config";
 </Layout>
 
 <script>
+  declare global {
+    interface Window {
+      __starMouseHandler?: (event: MouseEvent) => void;
+    }
+  }
+
   document.addEventListener("astro:page-load", () => {
     const indexLayout = (document.querySelector("#main-content") as HTMLElement)
       ?.dataset?.layout;
@@ -664,17 +670,17 @@ import { SITE } from "@/config";
 </script>
 
 <script>
-document.addEventListener("astro:page-load", () => {
-  // If a previous mousemove listener exists, remove it.
-  if (window.__starMouseHandler) {
-    document.removeEventListener("mousemove", window.__starMouseHandler);
-  }
+  document.addEventListener("astro:page-load", () => {
+    // If a previous mousemove listener exists, remove it.
+    if (window.__starMouseHandler) {
+      document.removeEventListener("mousemove", window.__starMouseHandler);
+    }
 
-  // Delay to ensure main scripts run first
-  setTimeout(() => {
-    // Create and insert style element for star animations
-    const styleElement = document.createElement("style");
-    styleElement.textContent = `
+    // Delay to ensure main scripts run first
+    setTimeout(() => {
+      // Create and insert style element for star animations
+      const styleElement = document.createElement("style");
+      styleElement.textContent = `
       @-webkit-keyframes moveStar {
         0% { -webkit-transform: translateY(0) rotate(0deg); transform: translateY(0) rotate(0deg); opacity: 1; }
         100% { -webkit-transform: translateY(-100px) rotate(360deg); transform: translateY(-100px) rotate(360deg); opacity: 0; }
@@ -713,94 +719,97 @@ document.addEventListener("astro:page-load", () => {
         transform: rotate(45deg);
       }
     `;
-    document.head.appendChild(styleElement);
+      document.head.appendChild(styleElement);
 
-    // Star creation function remains similar to your original
-    function createStar(x, y) {
-      const windowWidth = window.innerWidth;
-      const marginWidth = windowWidth * 0.2;
-      if (windowWidth < 1000) return;
+      // Star creation function remains similar to your original
+      function createStar(x: number, y: number) {
+        const windowWidth = window.innerWidth;
+        const marginWidth = windowWidth * 0.2;
+        if (windowWidth < 1000) return;
 
-      // Create stars only in the margin areas
-      if (x < marginWidth || x > windowWidth - marginWidth) {
-        const star = document.createElement("div");
-        star.className = "star";
+        // Create stars only in the margin areas
+        if (x < marginWidth || x > windowWidth - marginWidth) {
+          const star = document.createElement("div");
+          star.className = "star";
 
-        // Randomize star size
-        const size = 6 + Math.random() * 8;
-        star.style.width = `${size}px`;
-        star.style.height = `${size}px`;
-        star.style.left = `${x}px`;
-        star.style.top = `${y}px`;
+          // Randomize star size
+          const size = 6 + Math.random() * 8;
+          star.style.width = `${size}px`;
+          star.style.height = `${size}px`;
+          star.style.left = `${x}px`;
+          star.style.top = `${y}px`;
 
-        // Randomize animation duration
-        const duration = 3 + Math.random();
-        star.style.animationDuration = `${duration}s`;
+          // Randomize animation duration
+          const duration = 3 + Math.random();
+          star.style.animationDuration = `${duration}s`;
 
-        // Random color selection from your palette
-        const colors = [
-          "#4d94ff",
-          "#1e90ff",
-          "#1D58A7",
-          "#8a2be2",
-          "#9370db",
-          "#6a5acd",
-          "#7b68ee",
-          "#9966cc",
-          "#ffd700"
-        ];
-        const randomColor = colors[Math.floor(Math.random() * colors.length)];
+          // Random color selection from your palette
+          const colors = [
+            "#4d94ff",
+            "#1e90ff",
+            "#1D58A7",
+            "#8a2be2",
+            "#9370db",
+            "#6a5acd",
+            "#7b68ee",
+            "#9966cc",
+            "#ffd700",
+          ];
+          const randomColor = colors[Math.floor(Math.random() * colors.length)];
 
-        // Give the star a unique ID to style its pseudo-element
-        const uniqueId = "star-" + Date.now() + "-" + Math.floor(Math.random() * 1000);
-        star.id = uniqueId;
-        const starStyle = document.createElement("style");
-        starStyle.textContent = `
+          // Give the star a unique ID to style its pseudo-element
+          const uniqueId =
+            "star-" + Date.now() + "-" + Math.floor(Math.random() * 1000);
+          star.id = uniqueId;
+          const starStyle = document.createElement("style");
+          starStyle.textContent = `
           #${uniqueId}:before {
             background-color: ${randomColor};
           }
         `;
-        document.head.appendChild(starStyle);
+          document.head.appendChild(starStyle);
 
-        document.body.appendChild(star);
+          document.body.appendChild(star);
 
-        // Clean up the star element and its style after animation
-        setTimeout(() => {
-          starStyle.remove();
-          star.remove();
-        }, duration * 1000);
+          // Clean up the star element and its style after animation
+          setTimeout(() => {
+            starStyle.remove();
+            star.remove();
+          }, duration * 1000);
+        }
       }
-    }
 
-    let lastX = 0;
-    let lastY = 0;
-    let throttleTimer = null;
+      let lastX = 0;
+      let lastY = 0;
+      let throttleTimer: NodeJS.Timeout | null = null;
 
-    // Throttled star creation to limit how often stars are spawned
-    const throttledStarCreation = (e) => {
-      const currentX = e.clientX;
-      const currentY = e.clientY;
-      const distance = Math.sqrt((currentX - lastX) ** 2 + (currentY - lastY) ** 2);
+      // Throttled star creation to limit how often stars are spawned
+      const throttledStarCreation = (e: MouseEvent) => {
+        const currentX = e.clientX;
+        const currentY = e.clientY;
+        const distance = Math.sqrt(
+          (currentX - lastX) ** 2 + (currentY - lastY) ** 2
+        );
 
-      if (distance > 5) {
-        createStar(currentX, currentY);
-        lastX = currentX;
-        lastY = currentY;
-      }
-    };
+        if (distance > 5) {
+          createStar(currentX, currentY);
+          lastX = currentX;
+          lastY = currentY;
+        }
+      };
 
-    // Create and store the new event handler globally
-    window.__starMouseHandler = (e) => {
-      if (!throttleTimer) {
-        throttleTimer = setTimeout(() => {
-          throttleTimer = null;
-          throttledStarCreation(e);
-        }, 30);
-      }
-    };
+      // Create and store the new event handler globally
+      window.__starMouseHandler = e => {
+        if (!throttleTimer) {
+          throttleTimer = setTimeout(() => {
+            throttleTimer = null;
+            throttledStarCreation(e);
+          }, 30);
+        }
+      };
 
-    // Attach the event listener for the current page instance
-    document.addEventListener("mousemove", window.__starMouseHandler);
-  }, 100);
-});
+      // Attach the event listener for the current page instance
+      document.addEventListener("mousemove", window.__starMouseHandler);
+    }, 100);
+  });
 </script>
