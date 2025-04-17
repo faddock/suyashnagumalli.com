@@ -2,7 +2,7 @@
 title: Nine Personal Finance Rules from Dad
 author: Suyash Nagumalli
 pubDatetime: 2025-04-10T02:53:36Z
-slug: personal-finance-rules
+slug: finance-rules
 featured: false
 draft: false
 tags:

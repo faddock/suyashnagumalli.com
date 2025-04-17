@@ -32,6 +32,9 @@ git push
 git switch main
 ```
 
+check deployment:
+https://app.netlify.com/sites/tranquil-piroshki-f5d279/deploys
+
 ## Git Branch Naming guidelines
 
 | Prefix      | Use Case                               | Example Branch Name                   |

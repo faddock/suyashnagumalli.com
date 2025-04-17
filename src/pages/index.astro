@@ -50,7 +50,26 @@ import { SITE } from "@/config";
           >
             Suyash Nagumalli
           </h1>
-          <p class="text-lg text-red-400">సుయష్ నాగుమల్లి | सुयश नागुमल्ली</p>
+          <p class="flex flex-wrap gap-2 text-lg text-red-400">
+            <!-- Telugu -->
+            <span class="group relative">
+              <span class="cursor-pointer">సుయష్ నాగుమల్లి</span>
+              <span
+                class="absolute top-full left-1/2 z-10 mt-1 translate-x-[-50%] scale-95 rounded bg-gray-800 px-2 py-1 text-xs whitespace-nowrap text-white opacity-0 shadow transition duration-400 group-hover:scale-100 group-hover:opacity-100"
+              >
+                Telugu transliteration
+              </span>
+            </span>
+            |
+            <span class="group relative">
+              <span class="cursor-pointer">सुयश नागुमल्ली</span>
+              <span
+                class="absolute top-full left-1/2 z-10 mt-1 translate-x-[-50%] scale-95 rounded bg-gray-800 px-2 py-1 text-xs whitespace-nowrap text-white opacity-0 shadow transition duration-400 group-hover:scale-100 group-hover:opacity-100"
+              >
+                Hindi transliteration
+              </span>
+            </span>
+          </p>
         </div>
 
         <!-- Wikipedia-style intro paragraph -->
@@ -724,8 +743,9 @@ import { SITE } from "@/config";
       // Star creation function remains similar to your original
       function createStar(x: number, y: number) {
         const windowWidth = window.innerWidth;
-        const marginWidth = windowWidth * 0.2;
-        if (windowWidth < 1000) return;
+        const containerWidth = 890;
+        const marginWidth = (windowWidth - containerWidth) / 2;
+        if (marginWidth <= 0) return;
 
         // Create stars only in the margin areas
         if (x < marginWidth || x > windowWidth - marginWidth) {
@@ -804,7 +824,7 @@ import { SITE } from "@/config";
           throttleTimer = setTimeout(() => {
             throttleTimer = null;
             throttledStarCreation(e);
-          }, 30);
+          }, 2);
         }
       };
 

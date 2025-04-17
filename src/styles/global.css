@@ -17,7 +17,7 @@ html[data-theme="light"] {
   --muted: #e9eefe;
   --border: #b5b8fd;
   --link-color: #6859c7; /* Match purple accent */
-  --link-hover-bg: #1d58a7;
+  --link-hover-bg: #6859c7;
   --link-hover-text: white;
 }
 

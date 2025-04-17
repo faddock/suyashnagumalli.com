@@ -6,7 +6,7 @@ layout: ../layouts/AboutLayout.astro
 Step into Suyash's musical world. Here are the highlights of songs he has written, featuring some very talented artists.
 He is open to collaborating with songwriters, vocalists and producers. Follow him on all streaming platforms.
 
-### 🎵 New Situation
+### New Situation
 
 <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/3SY9bRt80RL05aVzrcT9Ty?utm_source=generator&" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
 
@@ -20,7 +20,7 @@ He is open to collaborating with songwriters, vocalists and producers. Follow hi
   </a>
 </div>
 
-### 🎵 Hey Grace (Love Song)
+### Hey Grace (Love Song)
 
 <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/4ycthFAR9j5L62GddafJBG?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
 <div class="story-link">
@@ -33,7 +33,7 @@ He is open to collaborating with songwriters, vocalists and producers. Follow hi
   </a>
 </div>
 
-### 🎵 Finals Week
+### Finals Week
 
 <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/56QAYqO6P4W8N5002CZk4O?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
 <div class="story-link">
@@ -46,11 +46,11 @@ He is open to collaborating with songwriters, vocalists and producers. Follow hi
   </a>
 </div>
 
-### 🎵 Worlds Away
+### Worlds Away
 
 <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1795479325&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
 
-### 🎵 Mbappé
+### Mbappé
 
 <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/suyash-nagumalli/mbappe&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
 
