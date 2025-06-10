@@ -17,5 +17,5 @@ export const SITE = {
     appendFilePath: true,
   },
   dynamicOgImage: true,
-  resume_filename: "Suyash_Nagumalli_Resume_SU25.pdf",
+  resume_filename: "Suyash_Nagumalli_Resume_Jun_25.pdf",
 } as const;
