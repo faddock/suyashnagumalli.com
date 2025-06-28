@@ -2,7 +2,7 @@ export const SITE = {
   website: "https://suyashnagumalli.com/", // replace this with your deployed domain
   author: "Suyash Nagumalli",
   profile: "https://suyashnagumalli.com/",
-  desc: "Personal website with SEO - Suyash Nagumalli",
+  desc: "Find everything there is to know about Suyash Nagumalli on his personal website.",
   title: "Suyash!",
   ogImage: "astropaper-og.jpg",
   lightAndDarkMode: true,
@@ -12,8 +12,8 @@ export const SITE = {
   showArchives: false,
   showBackButton: true, // show back button in post detail
   editPost: {
-    url: "https://github.com/faddock/suyashnagumalli.com/edit/main/src/data/blog",
-    text: "Suggest Changes",
+    url: "https://open.substack.com/pub/suyashnagumalli/p/",
+    text: "Write a comment",
     appendFilePath: true,
   },
   dynamicOgImage: true,
