@@ -96,8 +96,12 @@ import { SITE } from "@/config";
           <a class="link" href="mailto:usasuyash@gmail.com">Email</a> |
           <a
             class="link"
-            href="https://www.instagram.com/suyashnagumalli/?hl=en">Instagram</a
-          >
+            href="https://www.instagram.com/suyashnagumalli/?hl=en">Instagram</a> | 
+          <!-- Calendly link widget begin -->
+          <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+          <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+          <a class="link" href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/usasuyash/chat'});return false;">Schedule time to chat</a>
+          <!-- Calendly link widget end -->
           <br />
           Stalk him:
           <a class="link" href={`/${SITE.resume_filename}`} target="_blank"
