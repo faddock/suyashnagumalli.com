@@ -100,7 +100,7 @@ import { SITE } from "@/config";
           <!-- Calendly link widget begin -->
           <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
           <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
-          <a class="link" href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/usasuyash/chat'});return false;">Schedule time to chat</a>
+          <a class="link" href="#" onclick={`Calendly.initPopupWidget({url: '${SITE.calendly_url}'});return false;`}>Let's chat (preferred)</a>
           <!-- Calendly link widget end -->
           <br />
           Stalk him:
@@ -123,7 +123,7 @@ import { SITE } from "@/config";
             >YouTube</a
           >
         </div>
-        <p class="mx-4">Currently based in Waukegan, Illinois 📌</p>
+        <p class="mx-4">Currently based in Illinois 📌</p>
 
         <br /><br />
         <!-- Wikipedia-style information box -->
@@ -267,13 +267,12 @@ import { SITE } from "@/config";
               Academic and professional career
             </h2>
             <p>
-              Suyash completed his undergraduate degree in Computer Science at
+              Suyash completed his Bachelors and Master's degrees in Computer Science at
               the
               <a class="link" href="https://cs.illinois.edu/"
                 >University of Illinois Urbana-Champaign (UIUC)</a
-              > and is currently pursuing his Master's degree there. His academic
-              journey has been marked by a strong interest in building software that
-              serves people in daily activities and in healthcare.
+              >. His academic journey has been marked by a strong interest in building software that
+              serves people.
             </p>
 
             <h3 class="mt-4 mb-2 text-lg font-medium">
@@ -685,6 +684,22 @@ import { SITE } from "@/config";
     const video = document.querySelector(".video-element") as HTMLVideoElement;
     if (video && video.paused) {
       video.play();
+    }
+  });
+</script>
+
+<script define:vars={{ calendlyUrl: SITE.calendly_url }}>
+  // Handle /chat redirect - open Calendly popup
+  document.addEventListener("astro:page-load", () => {
+    if (new URLSearchParams(window.location.search).get("openChat") === "true") {
+      setTimeout(() => {
+        if (window.Calendly) {
+          window.Calendly.initPopupWidget({
+            url: calendlyUrl,
+          });
+          window.history.replaceState({}, "", "/");
+        }
+      }, 1000);
     }
   });
 </script>

@@ -11,6 +11,7 @@ import { SITE } from "./src/config";
 export default defineConfig({
   redirects: {
     "/resume": "/" + SITE.resume_filename,
+    "/chat": "/?openChat=true",
   },
   site: SITE.website,
   integrations: [

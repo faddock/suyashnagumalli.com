@@ -18,4 +18,5 @@ export const SITE = {
   },
   dynamicOgImage: true,
   resume_filename: "Suyash_Nagumalli_Resume_Nov_25.pdf",
+  calendly_url: "https://calendly.com/usasuyash/chat",
 } as const;

@@ -39,6 +39,39 @@ layout: ../layouts/AboutLayout.astro
 }
 </style>
 
+<h3 class="category-header">Products & Startups</h3>
+
+<div>
+  <div class="header-container">
+    <h4 class="header-title"><a href="https://spndmate.com">Spndmate.com</a></h4>
+    <p class="header-date">2025</p>
+  </div>
+  <ul class="ul-projects">
+    <li class="li-projects">Expense-tracking automatation tool using an SMS AI Agent and Google Sheets.</li>
+    <li class="li-projects">MVP is live and accepting sign-ups; open to funding opportunities.</li>
+  </ul>
+</div>
+
+<div>
+  <div class="header-container">
+    <h4 class="header-title">Stealth Startup</h4>
+    <p class="header-date">2025</p>
+  </div>
+  <ul class="ul-projects">
+    <li class="li-projects">A social media app for discovering and sharing media recommendations with friends</li>
+  </ul>
+</div>
+
+<div>
+  <div class="header-container">
+    <h4 class="header-title"><a href="https://docs.google.com/presentation/d/1NWBQLSzvgOGBHayKl5xRV5tL7vMCtOa2rdNeE1EkIaY/edit?usp=sharing">Dumstr</a></h4>
+    <p class="header-date">Dec 2023</p>
+  </div>
+  <ul class="ul-projects">
+    <li class="li-projects">A marketplace for students to give away and collect reusable items for free, built using Flutter.</li>
+  </ul>
+</div>
+
 <h3 class="category-header">AI & Machine Learning</h3>
 
 <div>
@@ -128,29 +161,6 @@ layout: ../layouts/AboutLayout.astro
   <ul class="ul-projects">
     <li class="li-projects">Smart Wheelchair-accessible Navigation system for public transport commuters in Chicago.</li>
     <li class="li-projects">Uses the CTA Transit, Customer Alerts, and Google Maps APIs to calculate most efficient route.</li>
-  </ul>
-</div>
-
-<h3 class="category-header">Mobile App Development</h3>
-
-<div>
-  <div class="header-container">
-    <h4 class="header-title"><a href="https://devpost.com/software/spndmate">Spndmate</a></h4>
-    <p class="header-date">Feb - May 2024 (~60 hours)</p>
-  </div>
-  <ul class="ul-projects">
-    <li class="li-projects">A fresh perspective to group-bill splitting and personal budgeting for young adults, powered by Splitwise.</li>
-    <li class="li-projects">An Android/iOS app built using Flutter, Android emulator and Material UI, with Google Sheets backend API.</li>
-  </ul>
-</div>
-
-<div>
-  <div class="header-container">
-    <h4 class="header-title"><a href="https://docs.google.com/presentation/d/1NWBQLSzvgOGBHayKl5xRV5tL7vMCtOa2rdNeE1EkIaY/edit?usp=sharing">Dumstr</a></h4>
-    <p class="header-date">Dec 2023</p>
-  </div>
-  <ul class="ul-projects">
-    <li class="li-projects">A marketplace for students to give away and collect reusable items for free, built using Flutter.</li>
   </ul>
 </div>
 
