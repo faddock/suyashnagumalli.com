@@ -16,7 +16,6 @@ _Reading time: 3 minutes_
 
 ![](../../assets/images/last-of-us.avif)
 
-
 ### Foreword
 
 When I found myself with more than a text message worth of comments on The Last of Us, I knew it deserved a dedicated review. Below is my honest take on Seasons 1 and 2—straight from someone who’s never played the games and is stepping into this world for the very first time.
