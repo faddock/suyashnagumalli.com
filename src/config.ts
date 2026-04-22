@@ -17,6 +17,6 @@ export const SITE = {
     appendFilePath: true,
   },
   dynamicOgImage: true,
-  resume_filename: "Suyash_Nagumalli_Resume_Nov_25.pdf",
+  resume_filename: "Suyash_Nagumalli_Resume_Apr_26.pdf",
   calendly_url: "https://calendly.com/usasuyash/chat",
 } as const;
