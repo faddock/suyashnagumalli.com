@@ -3,7 +3,7 @@ export const SITE = {
   author: "Suyash Nagumalli",
   profile: "https://suyashnagumalli.com/",
   desc: "Find everything there is to know about Suyash Nagumalli on his personal website.",
-  title: "Suyash!",
+  title: "Suyash Nagumalli",
   ogImage: "og-suyash.jpg",
   lightAndDarkMode: true,
   postPerIndex: 4,
