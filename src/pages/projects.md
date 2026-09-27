@@ -43,12 +43,11 @@ layout: ../layouts/AboutLayout.astro
 
 <div>
   <div class="header-container">
-    <h4 class="header-title"><a href="https://spndmate.com">Spndmate.com</a></h4>
-    <p class="header-date">2025</p>
+    <h4 class="header-title">iOS and Android Apps</h4>
+    <p class="header-date">2025-Present</p>
   </div>
   <ul class="ul-projects">
-    <li class="li-projects">Expense-tracking automatation tool using an SMS AI Agent and Google Sheets.</li>
-    <li class="li-projects">MVP is live and accepting sign-ups; open to funding opportunities.</li>
+    <li class="li-projects">Designing, building, and shipping a portfolio of iOS and Android apps.</li>
   </ul>
 </div>
 

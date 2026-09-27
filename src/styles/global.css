@@ -123,9 +123,3 @@ html[data-theme="dark"] {
 .wiki-categories {
   @apply mt-8 border-t border-gray-300 pt-4 text-sm text-gray-600;
 }
-.small-h2-border {
-  width: calc(
-    100% - 340px
-  ); /* Adjust 340px based on your sidebar width and spacing */
-  position: relative;
-}
